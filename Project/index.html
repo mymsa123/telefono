@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cont1{
+            /* margin: auto; */
+           /* padding: auto; */
+           /* padding-bottom: 10px; */
+           margin-bottom: 1px;
+            display: flex;
+            flex-direction: row;
+            background-color: black;
+
+        }
+        .cont1>img{
+            width: 80px;
+            color: blue;
+            background-color: black;
+             height: 80px; 
+        }
+        .cont1>a{
+            color: white;
+            margin: auto;
+        }
+        /* .cont2{
+            background-color: black;
+        } */
+        .cont2>p{
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .cont3{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .cont3>h1{
+            text-align: center;
+            font-size: 70px;
+            color: white;
+        }
+        .cont3>h6{
+            text-align: center;
+            font-size: 30px;
+            color: white;
+            margin :auto
+        }
+        .cont3>img{
+            align-items: center;
+            /* width: 300px; */
+            height: 500px;
+        }
+
+        .cont4>h1{
+            text-align: center;
+            font-size: 70px;
+            color: black;
+        }
+
+        .cont4>h4{
+            text-align: center;
+            font-size: 30px;
+            color: black;
+            margin :auto 
+        }
+
+        /* .cont4>img{ */
+            /* align-items: center; */
+            /* width: 300px; */
+            /* height: 500px;  */
+        /* } */
+
+        .cont5{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            flex-direction: column; 
+        }
+
+        
+
+        .cont5>h3{
+            text-align: center;
+            font-size: 40px;
+            color: white;
+            /* margin-top: auto; */
+            padding-top: 50px;
+        }
+
+        .cont5>h5{
+            text-align: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        .cont6{
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 20px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <!-- <header> -->
+        <div class="cont1">
+                <img 
+                src="C:\Users\samal\Pictures\apple log\applelogo.jpg" alt="">
+                    <a href="">img</a>
+                    <a href="">Mac</a>
+                    <a href="">iPad</a>
+                    <a href="">Watch</a>
+                    <a href="">AirPods</a>
+                    <a href="">TV& Home</a>
+                    <a href="">Entertainment</a>
+                    <a href="">Accessories</a>
+                    <a href="">Support</a>
+         </div>
+
+         <div class="cont2">
+          <p>Get $200-$600 in credit toward iPhone 14 or iPhone14 14 Pro when you trade in iPhone 11 or higher</p>  
+         </div>
+
+         <div class="cont3">
+            <h1>iPhone 14 Pro</h1>
+            <h6>Pro. Beyond</h6>
+            <img src="https://img.etimg.com/thumb/msid-78653508,width-640,height-480,imgsize-53468,resizemode-4/meet-the-new-iphones.jpg" alt="">
+
+         </div>
+
+         <div class="cont4">
+            <h1>iPhone 14</h1>
+            <h4>Two great sizes</h4>
+            <h4>Now with a splash of yellow</h4>
+            <img src="https://www.apple.com/in/iphone-12/images/meta/iphone-12_specs__uks7xn3l3yqa_og.png?202303020442" alt="">
+         </div>
+
+         <div class="cont5">
+            <img style="width: 400px; height: 400px; margin: auto;"
+             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAdVBMVEUAAAD////w8PBBQUFERETm5uaFhYX8/Pz19fXr6+uoqKiAgIDY2NjAwMDKysp8fHzR0dE7OzuXl5dwcHA2NjYxMTFJSUlPT08QEBC4uLhtbW2vr6+ioqLn5+cmJiZXV1cbGxtiYmJOTk6Ojo6YmJgXFxceHh4Ag0T6AAADHElEQVR4nO3YUXOiMBSGYQ4qAUUtUrHYVrS2/f8/cc9JAtrpzl5t68i8zw0hpA58k4RDkwQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADA/zH5uPUd3I3HB3m79T3cjVReb30Ld+NFZHHre7gbpctufQt34VDXx2SbTM9Z48+3b5Otb0ybyh8nzS4MbKYT32iaaS+MSLr9fhd/btrEvW/SNE+/8wS/pxW1amd2KC2lWmRmF/bacdTjxIkcrONBO2pryEVp55vcmkVYx9oOGekvVr/9MD9sJW54cicv2nNIQzjP2rNPfHgPNnKbWqrWyv3YISyL29m5/XVSXMJyk5s80o85ybWl79MZdNJDqR3Pid/7fQoLcbnkFsTu1O2W2tt1nS6+tfafq0qnl7OlmI43rOV1VmnYq84icy28bLJYOaGh+c1sJbNNmGvm8vrU62s76sU2GXVY6XVYq9DX+XVXi9NdJ0k+Uyms95hKewhzzcxFwvvzoDPKN7blLIYVRowvrPz7KvRbs21ZRW3rsYv9tc2qGFziwwozaxd3+Z6Gtd7Xdb0vxh1W/9CtLbxSp5fTifQeU2nFbW3TP4UxQ1jdt7Bc/7oYW1gP12G5GMRa5P1D5KxXZzbCtrKnV1ubp7AvJT4sv1P9LSw30rDmX96GRSiMtrkstcrqbKv/LEIWel5uNvNYg/0zLGmqqnp8HN8ybNyXtOTR95ZSLC2VqcgmFg7tMCRMvyGsyknuG8d2aSNHvMH7auqqeAid77aIbL0Vkod0nrS1UmX/PhzCsirUf+rU4XU64tJBV9H13Iql08nFtpVh6THxm5UPadKvw2GD1/rKpZ3+0CzEN+awhvXlLoWWny25rUitzsO3znOcSB96xX8oX8LSrV/jSvu36ajD0spck5lZVrND37fsJ5DE2lM/dEJ53/ry/jqs4ZUayrTrD+nxhZW8LO1/CXU7Pw5d0ywL+/h6nVmCH1kWv3Oq2Oqy7BJFtXmen+PpIjuHxnqxGMIHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA7w+ELB7Se6tOoQAAAABJRU5ErkJggg==" alt="">
+            <h3>SERIES 8</h3>
+            <h5>A healthy leap ahead</h5>
+            <img style="width: 300px; height: 300px; margin: auto;"
+            src="https://media.wired.com/photos/620ec99bc14aa6d334a5d91c/master/w_2560%2Cc_limit/Gear-Apple-Watch-Fitness-Tracker.jpg" alt="">
+         </div>
+         
+         <div class="cont6">
+            <div id="ipads">
+                <h3 style="text-align: center; font-size: 20px;">iPad</h3>
+                <h5 style="text-align: center; font-size: 20px;">Lovable.Drawable.Magical</h5>
+                <img style="width: 300px; height: 300px; margin-left: 180px;"
+                src="https://www.apple.com/newsroom/images/product/ipad/standard/Apple-iPad-10th-gen-hero-221018_Full-Bleed-Image.jpg.large.jpg" alt="">
+            </div>
+            <div id="mac" style="background-color: black;">
+                <h3 style="color: white; text-align: center;">MacBook Pro</h3>
+                <h5 style="color: white;text-align: center;">Supercharged by M2 Pro and M2 Max</h5>
+                <img style="width: 350px; height: 300px; margin-left: 170px;"
+                src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQERAPDxAQEA8PDw4QEA8QDxAPEA0PFhEWFhURFRUYHCggGBolHRMVITMtJSkrLi4uFyEzODMsOCktLisBCgoKDg0OGhAQGjIfHiYrLS03LjU3LSstLysvLS0tKy4xNy0wLTAtKy0tLTUtKysvLjcwNysrLSs3NzA3Kys1K//AABEIAKMBNgMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAgMBBQYEB//EAEYQAAEDAgIGBAkKBAYDAQAAAAEAAgMEEQUhEhMxQVFhBlRxkRQVIjJSYtHS0xYjQmOBkpOhsfBDcpTBM4Kiw+HxRIOyJP/EABkBAQADAQEAAAAAAAAAAAAAAAABAgMEBf/EAC0RAQACAQIEBAQHAQAAAAAAAAABAhEDEgQhMUEiUbHwYZGhwRUjMnHR4fET/9oADAMBAAIRAxEAPwD4aiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIraWHWPazSazSOb3khjBtJNgTbsBQVItn4qZvrKXvnP+2s+Kouu03dP7iDVotw7BoxYmshAIuCY6ixHEeRmFhmEwkgCthJJAAEVQSSdgA0Myg1CLePwGNpIdVNaRtDqaqBHexVeLKbr0X4FR7qnCImJ6NQi3Hium68z+mqPdWfFdL15v8ATVHsUYTlpkW58W0nX2/0s/sQYbR9fH9LMg0yLfQ4VQuIBxJrL/SNHUEDttmvPjeBSUpDtOOeB99XUwO04pOV7XaeR5oNSiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgLIKwiC1pv2/r2KQ4HZ+ioVrH8e/2oiYbbDsS0G6icGWmJNgPPhJ2ujJ2HeQcjy84MUwoxgSRuEkD/MlbsPI+i4XGR9hWvYbbgRvB2FbHDqx0Ac5nzsDrCaB+dhfLSHacnC2Z3E56UvHSzntExOa9fX+3S4F0pjqWtpcSdovADYa92ZG4MqOI3ae0b7jMVY50a1DyHxNBOYIAIcDmHAjIg8Vpa3DGSMNRSkui+mw5yQHg7i3ge+xyWy6MdK9U0UdaHS0exjts1GTvjJ2s4tOXCy66amPDfnHm5L6U5nU0eU94992plptHICw4LyvYu3xrA9FrZYnNlgkF45mZteOHIjeDmFy9RTWVr6XknR4iLfu1L2KlzV75I1Q9i5bUdtbvIQvbheKPgJAAfE/KSF+bJBvy3HmvM5qrIWMxhrEttX4Ux7HVNGS+EZyRHOWl/m9JvPv2XWlXroaySB4licWvbvGwjgRvC28lFFWtMlK0RVQF5KQZNl4vh93u3XhLnUWXNIJBBBBIIIsQeBWEBERARFKNhcbBBgC+xehtC87gO0r20tMG8zxXra1Bqhh0nq96z4sk9XvW4AUgFI03iuT1e8+xZ8VScW959i3VlkBBpPFMnFnefYpDB5OLO8+xbwBWNag0AwWXizvPsUhgUvGPvd7F0TWr0QQFxsB2ncBxKDmY+jsziACwk7AC4k/6V4MRon08r4ZQA+M2cAbjZfb9q6XFsfbBeKlIMmx8+3R9Vn7793JvcSSSSSSSSTcknaSVAiiIgIiICIiAiIgIiILI5Ldn6L207zcOYbOGwjuPaM7fbmtcpxyFpuFCtq5bqne9j9bTeRIPOiGbXjfoA7Rxab8rgkD1Pp4qwadOAycC76fc/K5dFx46O3hfO3hopWyZbHcOPYvTU0bidYy7Zmm+kMtM7bn1ue/fnmr01McpcdpxbE8p8/fWF/RvpJLQuMbxraZ5+dgf5p5jg4biMx2XB6quwuKoi8Ko3ayE2Lm/xICdzxw2i+w23EEDkmzsrPIn0YqoZNlPkMnPoyei/wBbYd9jmasNxGqw2clt2OaS2SNwyeN7SDlnbeCMhcFddNSafGrPV0f+k5jw3+kr6qkI3LXyRrv2Mp8SjMtLZk4F5abeDa5Md8yMibZkWNi4AlctXUJaSCLLa1ItG6vRnp60xOy/KWhexUPYtjLFZed7Fy2o7qXeIhI3lpDmktcDcOBsQeIKtexVELCYw3ict8Joq+zZi2GtsA2fZHVHc2S2x3P/AIA0VXSyRPdHK0se02LT+vMc96gVu6XE452CnrSbAWhqgLyU54O9NnL/ALFUtCi9uK4ZJTuDX2LXDSjlYbxyt9Jp7lTT05dmch+qCEMJcctm8raQQhosP+0ijAyCvaFIy1qsAQBSQZCkAq9POwzP5AK0IMgKQCAKYCDLQrWtWGhXOLI26yZ2izcPpPPAD9+wLIYsi5xDGNzc87B7StBjfSDTBhp7si+k7Y+Xt5fvLYvFjGMvqDojyIm+bGNnaeJ/fNaxQCIiAiIgIiICIiAiIgIiICIiDLXEZjIrr+jOMQyEQ1RDHHJkpyaeT+Hb38Tx6KLVzDHW0a6tds8vj5PqmM9CmzNLoyGTAeS76LuDXcue78ly2s0T4FiLXMdGA2Ke2k+Abgbf4kXC2Y3eiqcK6cYjTxsgiqdGNgsxrooJNEeiHPYTble3YoYz0lqq0NbVPZJoEljhBFG9l9oDmNBty2LTRzXvlwaHDcRp+HVvFq9u0whUU1RQytex2ibB8crHXZKy9w5rhtGQOW8biF1ODYkcRc8STtZUk3bG+npSx/IO0LntPYdxdosFqJNHUSQyT0ziToBpL4nHbJE63ku5bDv3EUY3gclMWyxlxjJvHIA6N7SM9FzdrHC477i4IK6badqxuryXvMX/AC7Ti3aW0xZ09M4tfDASD9Kmp/cWtd0hI201Ge2lpvcU4salms1z3Gc5XkmqNCXcA0NkDWO5Wsd1sgZGLEPObFMQdhYyocD2G5us4jUtziclabYxqdfl93lf0iv/AONR/ZS0vw155MYDv4MA/lgpR/tL1y+MD50NSf8A1VC87oKs7YJ/w6n2qk746toikf68j8QB/hx/hwf2jXndI0/QH2ED9Atl4HV76ep/Dqfaqzhkx208/wBsU39wo22lpW9PcpYfi4Y3UTR62lcbujLrujd6cZ+i7M9t+a9dVh2g0SxO1tO42bKBYtPoSD6Lv1/IU02HNB+dhlHaJG/2XWYFQUjWuaxxie8WOm8viePRkjO0dmY/I6V4e1uimpxlNL9UTjz6uTaFa0LaYnhGgXGMeZnJEHCQxtOx7HfTjO47RvzBtrAsJjDqraLRmOcK6moEbbnM7hxK1gMk7rZ2v/lYFt3RNdtaD2gFWRsAFgABwAsESrpqZrBZoz3neV6WtRrVa1qDACmApMYSbAXJXlxLFGU/kss+b/TH/wA/vtD0VlVHTt0pPKefMi3k8XcB++S5XEK+Sd2nIb8BuaOAVE0rnuLnkucdpKgoBERAREQEREBERAREQEREBERAREQEREBbPA8UbTyaUkEVRGRZ0crQ7Li07itYimJxOVb1i1ZrP8PqFL0noLAspIW8g2xHcvNjeKUVUzRdAyN48yZg8tnLPJzc9h/I5r55HKWq8TlddeIrMYmsPN/DYrbdW9vnMtk2llFy2SnLb2Bk8GaHfZIM16Ydebt11K0E7WyUTQ3K1rDYOy2ee9amnrnxuD2EgggjtC99XVRzN1gkdBNfyo7yaD/WbbzeYOXDgKTevaPq6LVvHaPky6Ga/wDjxf1MQv8AZpLqejmIwhuprI6S2ejVDwaUsJOyVuZLeY2b8s28fhuJvhcdM62Nw0Xsc4uu3kTsI+xXYgYtLSpqhwvnonWscw8LgWP72LPwzDLW07X8Fuk94z9uno7rGcPfH5rKcC1wRSUpBBzBB0MwuMxHW3N9Afywws/+WhbLov0pMA8Hq3a2mN9Egl0kBO0sJ3HhsvwuStjjMtC7NlTC4EAgh1jY55g5g8isZzV59I1uGvtvG6O049XBTh28/kF51uKwRXOi9ruw3WtlYNxUvb0r5joUlXJE4PjdoPbscAAew8QukpZo6sXYGxVNruh2Mm4uj4Hl+zytuR7istuCCLggggi4IPEI2dJo2yIsQbEHIg8CptCjh+KsqLR1BEc9gGVBFmy8Gy8DzXplgcxxa8FrhtB/XmFIi0K6KMnZu2k7AOarLmtF3ENaNpWixXGTIDHH5EX5v5n9+xB7MVxsNBjpzmcnS8eTf37VzxKwigEREBERAREQEREBERAXR4DhFHNCXzzPZJp20WuaBo8c2lc4vRStvfyi3sQdZ8ncO6zJ99nuLI6OYd1mX77PcXNCP6x3es6P1jvyQdMOjWG9Zl++z3FL5M4b1qW+7y2bfuLltX9Y/vTV/WP70HWydGMKz0aqa27SfHf8mKEfRbDr51T9G257L3+4uVdFb+I/vKiG521j+8oOyHRTCutzffj+GpjonhPW5vvx/DXGav6x/eU1f1j+8oO0+SWE9bm+/H8NVP6KYXuqpfvx+4uR1X1r+8qLmfWP7yg7mk6IYOWSGSsna8DyAHxWcefza88fRbDOtTD/ADx+4uNYDn5bshvN1kNJ2vcg7X5LYX1yX8SP4am3orhW+tm/Ei+GuJ8G9dyeC+uUHcfJTCevTfiRfDT5K4T16b8SL4a4bwb1yng3rlB3PyVwnr034kXw1j5K4T16b8SL4a4fwb1yng3rlB2lR0YwtrSWVc0jhazNfCy+fEx5LxeIKL05f62n+EuYMFhlI7vsoaJ9N3eUHZTdG8OGr0aiV2lbWf8A6YW6rZ9V5W07OC8GK4RRxP0YfCKhmiCJG1dOzM7RYxZWXPGMix1js+ahPpA2DycuxB3UfRbCTbSrJhe1/nYjbjnq1pMQrRFKYGSGop4CWQue5us1V76OkB3ZZXWmFPf+I7vXkfEQ4i57UHSVlBBI5hdUOs6JjyG2sxx2s+xeZ2D0t7CZ5HG8Vv1utNokWFzsQs9YoNw7CaXSDddIWkX1nzWi3kRe/wCW9RbhVKdP52UaN7X1Xzm3zbH9bbVqdXnbSPegZt8o5c0G5bg1IQD4Q4XAyIbcclnxNSdYd3NWmEXrlZ1PrFBuPE1J1h3c1Y8TUnWHdzVqNT6xWNT6xQbjxNSdYd3NTxPSdYd3NWo1XrFNV635BBtvE9J1h3c1a3GKSKJ4EUhkaWg6RttsLjLndVan1iqJm2Nr3QQREQFJjrKKILdYmsVaILNYmsVaILDIsB6gsILdYs6xVIEF2sWQ5QDFdFGkImcJNCyV6WRrD41faz3qASpWKyAp2U7UzdWAVItKyFcxqrMYVm6lsaPavVZeeYrPKN8y8sjlVpKcigGK8Q1iWS/YsG5KkIl6IogFCyULTvR48pSLlBALVTK1X3UXBSPGXKOmrpI1QQoEtNNYq0QWaxNYq0QWaaaarRBZrFBxusIgIiICIiAiIgIiICIiArYmqAV0aiVbSvaxSaLI0oSlWb0scjyqGuUtJbZVwwl1guWLqMpZurY5F5yVHTVZ5mHrfKvNI9VukUC5ViExVIZr0RsVDArdJXy02rDZQLlAvWLqqyRKxpKLiqw5BfdZuqwVm6DLlRI1W3USg8xCirnNVZCgRRZWEBERAREQEREBERAREQEREBZCIgk1WMRFEqyuCyiK1VEghKItEIkoERVGCoOKIoTCBWWoiheFoUHFEULMBTCIgwVBYRBMLKIgLCIpESq3LKKBWUREGEREBERAREQf/9k=" alt="">
+            </div>
+            <div id="homepod" style="background-color: black;"">
+                <h2  style="text-align: center; font-size: 20px; color: white;">HomePod</h2>
+                <h4 style="text-align: center; font-size: 20px; color: white;">Profound sound.</h4>
+                <img style="width: 350px; height: 300px; margin-left: 170px;" 
+                src="https://www.apple.com/v/homepod-2nd-generation/a/images/meta/homepod__dlwt789yhxme_og.png" alt="">
+            </div>
+
+            <div id="AirPods" style="background-color: aquamarine;">
+                <h2 style="text-align: center; font-size: 20px">AirPods Pro</h2>
+                <h4 style="text-align: center; font-size: 20px;">Up to 2x more</h4>
+                <h4 style="text-align: center; font-size: 20px;">Active Noise Cancelation</h4>
+                <img style="width: 350px; height: 300px; margin-left: 170px;"
+                src="https://cdn.dribbble.com/users/2063487/screenshots/7970307/test_002_4x.gif?compress=1&resize=400x300" alt="">
+            </div>
+
+            <div id="Musical" style="background-color: red;">
+                <h2 style="text-align: center; font-size: 20px">Music Classical</h2>
+                <h4 style="text-align: center; font-size: 20px">Introducing the app <br> designed for classical</h4>
+                <img style="width: 350px; height: 300px; margin-left: 170px;""
+                src="https://www.apple.com/newsroom/images/product/music/standard/Apple-Music-Classical-hero_big.jpg.large.jpg" alt="">
+            </div>
+
+            <div id="card">
+                <h2 style="text-align: center; font-size: 20px">Card</h2>
+                <h4 style="text-align: center; font-size: 20px">Get up to 3% Daily Cash back <br> with every purchase</h4>
+                <img style="width: 350px; height: 300px; margin-left: 170px;""
+                src="https://images.firstpost.com/wp-content/uploads/2019/08/Apple-Wallet-Case-Apple-Card.jpg" alt="">
+            </div>
+         </div>
+         <div class="cont7">
+            <img style="height: 500px; width: 1250px; padding-top: 10px;"
+            src="https://www.thesun.ie/wp-content/uploads/sites/3/2022/09/blackbirdreviews_comp.jpg?strip=all&quality=100&w=1500&h=1000&crop=1" alt="">
+        </div>
+
+        <div class="cont8"">
+            <p style="color: grey;"
+            >1. Trade-in values will vary based on the condition, year, and configuration of your eligible trade-in device. Not all devices are eligible for credit. You must be at least 18 years <br> old to be eligible to trade in for credit or for an Apple Gift Card. Trade-in value may be applied toward qualifying new device purchase, or added to an Apple Gift Card. Actual <br> value awarded is based on receipt of a qualifying device matching the description provided when estimate was made. Sales tax may be assessed on full value of a new <br>
+                device purchase. In-store trade-in requires presentation of a valid photo ID (local law may require saving this information). Offer may not be available in all stores, and may <br> vary between in-store and online trade-in. Some stores may have additional requirements. Apple or its trade-in partners reserve the right to refuse or limit quantity of any trade-in transaction for any <br> reason. More details are available from Apple’s trade-in partner for trade-in and recycling of eligible devices. Restrictions and limitations may <br>
+                 apply.</p>
+
+            <p style="color: grey;">
+                2. Compared to AirPods Pro (1st generation).
+To listen to music on Apple Music Classical, you must have an internet connection.
+To access and use all the features of Apple Card, you must add Apple Card to Wallet on an iPhone or iPad with the latest version of iOS or iPadOS. Update to the latest version by going to Settings > General > Software Update. Tap Download and Install.
+Available for qualifying applicants in the United States.
+Apple Card is issued by Goldman Sachs Bank USA, Salt Lake City Branch.
+Learn more about how Apple Card applications are evaluated at support.apple.com/kb/HT209218. 
+            </p>
+        </div>
+
+        <div class="cont9" style="display: flex; flex-direction: row; padding-left: 50px;">
+            <ul>Shop and Learn<br>
+                <l1 style="display: flex; flex-direction: column;">
+                    <a href="#" style="color: grey;">
+                        Store 
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Mac
+                    </a>
+                    <a href="#" style="color: grey;">
+                        iPad
+                    </a>
+                    <a href="#" style="color: grey;">
+                        iPhone
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Watch
+                    </a>
+                    <a href="#" style="color: grey;">
+                        AirPods
+                    </a>
+                    <a href="#" style="color: grey;">
+                        TV & Home
+                    </a>
+                    <a href="#" style="color: grey;">
+                        AirTag
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Accessories
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Gift Cards
+                    </a>
+                    
+                </l1>
+            </ul>
+            <ul style="margin-left: auto;">Apple Store<br>
+                <l1 style="display: flex; flex-direction: column;">
+                    <a href="#" style="color: grey;">                    
+                                Genius Bar
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Today at Apple
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Apple Store App
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Certified Refurbished
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Apple Trade In
+                    </a>
+                    <a href="#" style="color: grey;">
+                        AirPods
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Financing
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Carrier Deals at Apple
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Accessories
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Order Status
+                    </a>
+                    
+                </l1>
+            </ul>
+            <ul style="margin-left: auto;">Apple Values<br>
+                <l1 style="display: flex; flex-direction: column;">
+                    <a href="#" style="color: grey;">
+                        Accessibility  
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Education
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Environment
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Inclusion and Diversity
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Privacy
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Racial Equity and Justice
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Supplier Responsibility
+                    </a>
+                </l1>
+            </ul>
+            <ul style="margin-left: auto;">About Apple<br>
+                <l1 style="display: flex; flex-direction: column;">
+                    <a href="#" style="color: grey;">
+                        Newsroom  
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Apple Leadership
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Career Opportunities
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Investors
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Ethics & Compliance
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Events
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Contact Apple 
+                    </a>
+                    
+                </l1>
+            </ul>
+            <ul style="margin-left: auto;">Entertainment<br>
+                <l1 style="display: flex; flex-direction: column;">
+                    <a href="#" style="color: grey;">
+                        Apple One  
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Apple TV+
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Apple Music
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Apple Arcade
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Apple Fitness+
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Apple News+
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Apple Podcasts
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Apple Books
+                    </a>
+                    <a href="#" style="color: grey;">
+                        App Store
+                    </a>
+                    <!-- <a href="#" style="color: grey;">
+                        Gift Cards
+                    </a> -->
+                    
+                </l1>
+            </ul>
+            <ul style="margin-left: auto;">Apple Wallet<br>
+                <l1 style="display: flex; flex-direction: column;">
+                    <a href="#" style="color: grey;">
+                        Wallet
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Apple Card
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Apple Pay
+                    </a>
+                    <a href="#" style="color: grey;">
+                        Apple Cash
+                    </a>
+                </l1>
+            </ul>
+        </div>
+    <!-- </header> -->
+</body>
+<script src="index.js"></script>
+</html>

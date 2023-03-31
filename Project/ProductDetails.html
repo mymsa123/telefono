@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .cont1{
+           margin-bottom: 1px;
+            display: flex;
+            flex-direction: row;
+            background-color: black;
+
+        }
+        .cont1>img{
+            width: 80px;
+            color: blue;
+            background-color: black;
+             height: 80px; 
+        }
+        .cont1>a{
+            color: white;
+            margin: auto;
+        }
+
+        .cont2>p{
+            text-align: center;
+            font-size: 18px;
+            background-color: grey;
+        }
+
+        .product1{
+            margin: auto;
+            margin-top: 150px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            /* background-color: black; */
+            border: 1px solid rebeccapurple;
+        }
+
+        .product1>img2{
+            width: 100px;
+            height: 100px;
+        }
+
+        .discp{
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .ProductDetails{
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+        }
+        .productName{
+            align-items: center;
+            text-align: center;
+        }
+        .Name
+        {
+            color: chartreuse;
+            border: 2px solid rebeccapurple;
+        }
+
+
+        .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+  display:flex;
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+}
+
+    </style>
+</head>
+<body>
+    <div class="cont1">
+        <img 
+        src="C:\Users\samal\Pictures\apple log\applelogo.jpg" alt="">
+            <a href="C:\Users\samal\Desktop\Project\iphone.html">store</a>
+            <a href="">Mac</a>
+            <a href="">iPad</a>
+            <a href="">Watch</a>
+            <a href="">AirPods</a>
+            <a href="">TV& Home</a>
+            <a href="">Entertainment</a>
+            <a href="">Accessories</a>
+            <a href="">Support</a>
+ </div>
+ <div class="cont2">
+    <p>Get $200-$600 in credit toward iPhone 14 or iPhone14 14 Pro when you trade in iPhone 11 or higher</p>  
+   </div>
+   <div class="productName">
+   </div>
+    <div class="ProductDetails">
+    </div>
+</body>
+<script>
+     let product=JSON.parse(localStorage.getItem("clicked"))
+    let Maindiv = document.querySelector(".ProductDetails")
+    let productName=document.querySelector(".productName")
+    let h2=document.createElement("h2")
+    h2.className="Name";
+    h2.innerText="BUY NEW "+product.Name
+    productName.append(h2)
+    console.log(product);
+    let div2 = document.createElement("div")
+    let div3 = document.createElement("div")
+    let img2 = document.createElement("img")
+    let img3 = document.createElement("img")
+    let img4 =document.createElement("img")
+    let name1 = document.createElement("h2")
+    let price1 = document.createElement("h1")
+    let description1 = document.createElement("p")
+    img2.setAttribute("src", product.image)
+    img3.setAttribute("src", product.image1)
+    img4.setAttribute("src",product.charger)
+    div2.className="product1"
+    div2.append(img2 , img3 , img4)
+    div3.className="discp"
+    name1.innerText=product.Name
+    price1.innerText = "RS "+product.Price
+    description1.innerText = product.description
+    let button=document.createElement("button");
+    button.innerText="ADD To Cart"
+    let p=document.createElement("p");
+    // p.innerText="You can choose from different type of storage like"+"\n"+"128 GD "+"256 GB "+" 1 Tb "
+    p.innerText="STORAGE? "+"how much Storage Do you need"
+    let div4=document.createElement("div")
+    div4.className="container"
+    let div5=document.createElement("div")
+    div5.className="card"
+    let h4card=document.createElement("h4")
+    h4card.innerHTML="256 Gd";
+    let h5card=document.createElement("h4")
+    h5card.innerHTML="126 Gd";
+    div5.append(h4card,h5card)
+    div4.append(div5)
+    div3.append(name1 , price1 , description1,p,div4,button)
+    Maindiv.append(div2,div3)
+
+
+    let cart=JSON.parse(localStorage.getItem("cart"))||[]
+    button.addEventListener("click",function(){
+        let obj={
+            Product:product,
+            Quantity:1
+        }
+        cart.push(obj)
+        localStorage.setItem("cart", JSON.stringify(cart))
+    })
+
+    // }
+</script>
+</html>

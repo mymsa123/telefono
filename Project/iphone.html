@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cont1{
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            /* background-color: black; */
+        }
+        .card
+        {
+             border: 1px solid black;
+        }
+        .card>h2 ,p{
+            text-align: center;
+            /* background-color: white; */
+            color: black;
+        }
+        .card>img{
+            margin-left: 70px;
+            background-color: black;
+        }
+        .card>button{
+            background-color: aqua;
+            /* margin: auto; */
+            margin-left: 170px;
+        }
+        .card>a{
+            padding-bottom: 80px;
+            /* padding-top: 80px; */
+            margin-bottom: 80px;
+            margin-left: 170px;
+            /* margin: auto; */
+            /* align-items: center; */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="cont1"></div>
+</body>
+<script>
+    let cont = document.querySelector(".cont1")
+    let tele_fone =[
+    // {
+    //     id:1,
+    //     image:"https://cdn.shopify.com/s/files/1/1684/4603/products/iphone-12-pro_Graphite_600x.png?v=1652856493",
+    //     Name : "iPhone12",
+    //     description:"The Ultimate iPhone12",
+    //     Price:50000
+    // },
+    {
+        id:2,
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyZy1MaS6zb2uES7mGj4X2IFBpZ6lL99u-ug&usqp=CAU",
+        description:"The Ultimate iPhone13",
+        Name : "iPhone13",
+        Price:50000
+    },
+    {
+        id:3,
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfS-_3Hn-YAa6EuhL4gMOHSmQ3iueNTFPz-w&usqp=CAU",
+        description:"The Ultimate iPhone13 Pro",
+        Name : "iPhone13Pro",
+        Price:50000
+    },
+    {
+        id:4,
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMDHaA66eL6IPNHhUBn5UpplDc93w9WRaYvA&usqp=CAU",
+        description:"The Ultimate iPhone14",
+        Name : "iPhone14",
+        Price:50000
+    },
+    {
+        id:5,
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzSNaNaZsnOSX7NNn31ZIZEonxqxVuH3jRDw&usqp=CAU",
+        description:"The Ultimate iPhone14 Pro max",
+        Name :"iPhone14ProMax",
+        Price:50000
+    },
+    {
+        id:6,
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ22CSSDzmLbT6K207-n407i1OA0pzGAEg2kg&usqp=CAU",
+        description:"The Ultimate watch series6",
+        Name : "Series6",
+        Price:50000
+    },
+    {
+        id:7,
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNv6RCAJFwertBYI-KZGbv4RMkiCC1ddsWew&usqp=CAU",
+        description:"The Ultimate watch series7",
+        Name : "series7",
+        Price:50000
+    },
+    {
+        id:8,
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUlGkqQvL3WrazIGC99907D8BGJdf9HUWb-Q&usqp=CAU",
+        description:"The Ultimate watch series8",
+        Name : "series8",
+        Price:50000
+    },
+    {
+        id:9,
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa1Oj1-KOnUdqwaL86TyZ_t799NuYh5hjFOA&usqp=CAU",
+        description:"The Ultimate MackBook",
+        Name : "AppleMacBook",
+        Price:50000
+    },
+    {
+        id:10,
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3o5-HWzReTjmL1nuInEdIRJWtK-MKbDYgg&usqp=CAU",
+        description:"The Ultimate MackBook Pro",
+        Name : "MacBookPro",
+        Price:50000
+    },
+    {
+        id:11,
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHYXJ3VP5encI8V_2EOosjzWfnH1KPWOoquQ&usqp=CAU",
+        description:"The Ultimate AirPods Pro",
+        Name : "AppleAirPodsPro",
+        Price:50000
+    }
+]
+// let tbody1 = document.querySelector("cont")
+function display(){
+    // console.log(localStorage.getItem("filterkey"))
+    if(localStorage.getItem("filterkey")===null)
+    {
+for(let i = 0 ; i<tele_fone.length ; i++){
+    let div =document.createElement("div")
+    let img1 = document.createElement("img")
+    let Name1 = document.createElement("h2")
+    let description1 = document.createElement("p")
+    let price1 = document.createElement("p")
+    let btn1 = document.createElement("button")
+    let anc1 = document.createElement("a")
+    let br=document.createElement("br")
+div.className="card"
+    // tbody1.append(div)
+    // img1.innerHTML=tele_fone[i].image
+    img1.setAttribute("src", tele_fone[i].image)
+    Name1.innerHTML=tele_fone[i].Name
+    description1.innerHTML=tele_fone[i].description
+    price1.innerHTML=tele_fone[i].Price
+    btn1.innerText="Buy Now"
+    anc1.innerText="Learn More"
+    anc1.href="#"
+    div.append(img1 , Name1 , description1 , price1 , anc1,br,btn1)
+    cont.append(div)
+}
+    }
+    else{
+        let key=localStorage.getItem("filterkey")
+        for(let i = 0 ; i<tele_fone.length ; i++){
+            if(key===tele_fone[i].Name){
+        let div =document.createElement("div")
+        let img1 = document.createElement("img")
+        let Name1 = document.createElement("h2")
+        let description1 = document.createElement("p")
+        let price1 = document.createElement("p")
+        let btn1 = document.createElement("button")
+        let anc1 = document.createElement("a")
+        let br=document.createElement("br")
+    div.className="card"
+        // tbody1.append(div)
+        // img1.innerHTML=tele_fone[i].image
+        img1.setAttribute("src", tele_fone[i].image)
+        Name1.innerHTML=tele_fone[i].Name
+        description1.innerHTML=tele_fone[i].description
+        price1.innerHTML=tele_fone[i].Price
+        btn1.innerText="Buy Now"
+        anc1.innerText="Learn More"
+        anc1.href="#"
+        div.append(img1 , Name1 , description1 , price1 , anc1,br,btn1)
+        cont.append(div)
+            }
+}
+localStorage.clear()
+    }
+}
+display()
+
+</script>
+<!-- <div>
+    img 
+    h2 = name of the iPhone
+    p = the ultimate iphone
+    p = price
+    button = buy
+</div> -->
+</html>

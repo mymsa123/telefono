@@ -114,7 +114,7 @@
         <div class="cont1">
                 <img 
                 src="C:\Users\samal\Pictures\apple log\applelogo.jpg" alt="">
-                    <a href="">img</a>
+                    <a href="C:\Users\samal\Desktop\Project\iphone.html">store</a>
                     <a href="">Mac</a>
                     <a href="">iPad</a>
                     <a href="">Watch</a>
@@ -133,15 +133,16 @@
             <h1>iPhone 14 Pro</h1>
             <h6>Pro. Beyond</h6>
             <img src="https://img.etimg.com/thumb/msid-78653508,width-640,height-480,imgsize-53468,resizemode-4/meet-the-new-iphones.jpg" alt="">
-
          </div>
 
          <div class="cont4">
             <h1>iPhone 14</h1>
             <h4>Two great sizes</h4>
             <h4>Now with a splash of yellow</h4>
+            <a href="C:\Users\samal\Desktop\Project\iphone.html" onclick="filter(); return true;">
             <img src="https://www.apple.com/in/iphone-12/images/meta/iphone-12_specs__uks7xn3l3yqa_og.png?202303020442" alt="">
-         </div>
+        </a> 
+        </div>
 
          <div class="cont5">
             <img style="width: 400px; height: 400px; margin: auto;"
@@ -391,5 +392,11 @@ Learn more about how Apple Card applications are evaluated at support.apple.com/
         </div>
     <!-- </header> -->
 </body>
-<script src="index.js"></script>
+<script>
+    function filter()
+    {
+        console.log("yes")
+        localStorage.setItem("filterkey","iPhone14")
+    }
+</script>
 </html>

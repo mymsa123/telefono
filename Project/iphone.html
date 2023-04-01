@@ -7,6 +7,23 @@
     <title>Document</title>
     <style>
         .cont1{
+           margin-bottom: 1px;
+            display: flex;
+            flex-direction: row;
+            background-color: black;
+
+        }
+        .cont1>img{
+            width: 80px;
+            color: blue;
+            background-color: black;
+             height: 80px; 
+        }
+        .cont1>a{
+            color: white;
+            margin: auto;
+        }
+        .cont2{
             margin: auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -44,10 +61,23 @@
     </style>
 </head>
 <body>
-    <div class="cont1"></div>
+    <div class="cont1">
+        <img 
+        src="C:\Users\samal\Pictures\apple log\applelogo.jpg" alt="">
+            <a href="C:\Users\samal\Desktop\Project\iphone.html">store</a>
+            <a href="">Mac</a>
+            <a href="">iPad</a>
+            <a href="">Watch</a>
+            <a href="">AirPods</a>
+            <a href="">TV& Home</a>
+            <a href="">Entertainment</a>
+            <a href="">Accessories</a>
+            <a href="">Support</a>
+ </div>
+    <div class="cont2"></div>
 </body>
 <script>
-    let cont = document.querySelector(".cont1")
+    let cont = document.querySelector(".cont2")
     let tele_fone =[
     // {
     //     id:1,
@@ -59,6 +89,8 @@
     {
         id:2,
         image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyZy1MaS6zb2uES7mGj4X2IFBpZ6lL99u-ug&usqp=CAU",
+        image1 :"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq92Pq0XVisZlYGvfkBhlbyQbg6yZHQpq_Lw&usqp=CAU",
+        charger:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm18aijN_CbYVfgfwXORLQepGoFV6mUGab0Q&usqp=CAU",
         description:"The Ultimate iPhone13",
         Name : "iPhone13",
         Price:50000
@@ -127,6 +159,11 @@
         Price:50000
     }
 ]
+// let cart=[]
+// Add to cart steps
+// 1 create a global empty array
+// 2 check wheather that particualr item is in the cart or not if not then push it in the cart
+// 3 
 // let tbody1 = document.querySelector("cont")
 function display(){
     // console.log(localStorage.getItem("filterkey"))
@@ -149,6 +186,31 @@ div.className="card"
     description1.innerHTML=tele_fone[i].description
     price1.innerHTML=tele_fone[i].Price
     btn1.innerText="Buy Now"
+    btn1.addEventListener("click",function(){
+        // if(cart.length==0){
+        //     cart.push({PRODUCT:tele_fone[i],quantity:1})
+        //     console.log(cart)
+        //     alert("Product Added")
+        //     localStorage.setItem("cart1" , JSON.stringify(cart))
+        // }
+        // else{
+        //     let flag = true
+        //     for(let j = 0 ; j<cart.length ; j++){
+        //       if(cart[j].PRODUCT.id === tele_fone[i].id){
+        //         flag = false
+        //         alert("Product Already Added")
+        //         break;
+        //       }
+        //     } 
+        //       if(flag){
+        //         cart.push({PRODUCT:tele_fone[i],quantity:1})
+        //         alert("Product Added")
+        //         localStorage.setItem("cart1" , JSON.stringify(cart))
+        //       } 
+        // }
+        localStorage.setItem("clicked",JSON.stringify(tele_fone[i]))
+        window.location.href="ProductDetails.html"
+    })
     anc1.innerText="Learn More"
     anc1.href="#"
     div.append(img1 , Name1 , description1 , price1 , anc1,br,btn1)

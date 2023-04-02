@@ -87,8 +87,8 @@
 <body>
     <div class="cont1">
         <img 
-        src="C:\Users\samal\Pictures\apple log\applelogo.jpg" alt="">
-            <a href="C:\Users\samal\Desktop\Project\iphone.html">store</a>
+        src="C:\Users\samal\Pictures\apple log\applelogo.jpg" alt="" onclick="gotohomepage()">
+            <a href="iphone.html">store</a>
             <a href="">Mac</a>
             <a href="">iPad</a>
             <a href="">Watch</a>
@@ -97,8 +97,8 @@
             <a href="">Entertainment</a>
             <a href="">Accessories</a>
             <a href="">Support</a>
-            <a href="">iPhone</a>
-            <a href="Login.html">Cart</a>
+            <a href="iPhonestatic.html">iPhone</a>
+            <a href="addtocart.html">Cart</a>
  </div>
  <div class="cont2">
     <p>Get $200-$600 in credit toward iPhone 14 or iPhone14 14 Pro when you trade in iPhone 11 or higher</p>  
@@ -109,6 +109,13 @@
     </div>
 </body>
 <script>
+
+function gotohomepage()
+    {
+        window.location.href="index.html"
+    }
+
+
      let product=JSON.parse(localStorage.getItem("clicked"))
     let Maindiv = document.querySelector(".ProductDetails")
     let productName=document.querySelector(".productName")
@@ -155,13 +162,26 @@
 
     let cart=JSON.parse(localStorage.getItem("cart"))||[]
     button.addEventListener("click",function(){
-        let obj={
+        let flag=true
+        for(let i=0;i<cart.length;i++){
+            if(cart[i].Product.id=== product.id)
+            {
+                flag=false;
+                alert("product is already in the cart")
+                break;
+            }
+        }
+        if(flag)
+        {
+            let obj={
             Product:product,
             Quantity:1
         }
         cart.push(obj)
         localStorage.setItem("cart", JSON.stringify(cart))
         alert("Product Added to cart Thanks")
+        }
+       
     })
 
     // }

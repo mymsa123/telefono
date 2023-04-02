@@ -30,12 +30,22 @@
             color: white;
             margin: auto;
         }
+        #paymentbutton{
+            align-items: center;
+            color: violet;
+            background-color: black;
+            margin-top: 30px;
+            margin-left: 30%;
+            height: 100px;
+            width: 400px;
+            font-size: large;
+        }
 </style>
 <body>
     <div class="con1">
         <img 
-        src="C:\Users\samal\Pictures\apple log\applelogo.jpg" alt="">
-            <a href="C:\Users\samal\Desktop\Project\iphone.html">store</a>
+        src="C:\Users\samal\Pictures\apple log\applelogo.jpg" alt="" onclick="gotohomepage()">
+            <a href="iphone.html">store</a>
             <a href="">Mac</a>
             <a href="">iPad</a>
             <a href="">Watch</a>
@@ -44,13 +54,24 @@
             <a href="">Entertainment</a>
             <a href="">Accessories</a>
             <a href="">Support</a>
-            <a href="">iPhone</a>
-            <a href="Login.html">Cart</a>
+            <a href="iPhonestatic.html">iPhone</a>
+            <!-- <a href="Login.html">Cart</a> -->
  </div>
     <h1 id="total">Your Total cart Price is:- <span id="cart-total">0</span></h1>
     <div id="conatiner"></div>
+    <div>
+        <button id="paymentbutton" onclick="makepayment()">Make payment</button>
+    </div>
 </body>
 <script>
+    function gotohomepage()
+    {
+        window.location.href="index.html"
+    }
+    function makepayment()
+    {
+        window.location.href="payment.html"
+    }
     let cont1 = document.getElementById("conatiner")
     let span2 = document.getElementById("cart-total")
     function showData(){
@@ -80,12 +101,12 @@
             span1.innerText=addcart[i].Quantity
 
             btn1.addEventListener("click" ,function(){
-                addcart[i].quantity++;
+                addcart[i].Quantity++;
                 localStorage.setItem("cart", JSON.stringify(addcart))
                 showData()
             })
             btn2.addEventListener("click" , function(){
-                addcart[i].quantity--;
+                addcart[i].Quantity--;
                 localStorage.setItem("cart" ,JSON.stringify(addcart))
                 showData()
             })
@@ -108,6 +129,7 @@
 
         }
         span2.innerText=""+sum
+        localStorage.setItem("totalamount",""+sum)
     }
 
     showData()

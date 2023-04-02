@@ -97,13 +97,17 @@ span.psw {
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="button" onclick="goSignup()" class="signup">Sign up</button>
       <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
   </form>
 </div>
 
 <script>
+    function goSignup()
+    {
+        window.location.href="signup.html"
+    }
     let email1=document.getElementById("email")
     let psw1=document.getElementById("psw")
     let sub1=document.getElementById("submitbtm")
@@ -127,13 +131,15 @@ span.psw {
                     if(userlist[i].Password===userpass)
                     {
                         flag=true
-                        alert("welcome to cart please move forward")
-                        window.location.href="addtocart.html"
+                        alert("welcome to the store please add Iteams in the cart")
+                        window.location.href="iphone.html"
+                        break;
                     }
                     else
                     { flag=true
                         alert("You have entered a Wrong Password Please enter the details again")
                         window.location.href="Login.html"
+                        break;
                     }
                 }
             }

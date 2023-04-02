@@ -110,8 +110,8 @@
     <!-- <header> -->
         <div class="cont1">
                 <img 
-                src="C:\Users\samal\Pictures\apple log\applelogo.jpg" alt="">
-                    <a href="C:\Users\samal\Desktop\Project\iphone.html">store</a>
+                src="C:\Users\samal\Pictures\apple log\applelogo.jpg" alt="" onclick="gotohomepage()">
+                    <a href="iphone.html">store</a>
                     <a href="">Mac</a>
                     <a href="">iPad</a>
                     <a href="">Watch</a>
@@ -120,8 +120,8 @@
                     <a href="">Entertainment</a>
                     <a href="">Accessories</a>
                     <a href="">Support</a>
-                    <a href="">iPhone</a>
-                    <a href="Login.html">Cart</a>
+                    <a href="iPhonestatic.html">iPhone</a>
+                    <a href="Login.html">Login</a>
 
 
          </div>
@@ -396,8 +396,11 @@ Learn more about how Apple Card applications are evaluated at support.apple.com/
 <script>
     function filter()
     {
-        console.log("yes")
         localStorage.setItem("filterkey","iPhone14")
+    }
+    function gotohomepage()
+    {
+        window.location.href="index.html"
     }
 </script>
 </html>

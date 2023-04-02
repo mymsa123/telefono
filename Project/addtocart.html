@@ -6,12 +6,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    #conatiner{
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(4 , 1fr);
+        gap: 10px;
+      }
+      .con1{
+           margin-bottom: 1px;
+            display: flex;
+            flex-direction: row;
+            background-color: black;
+
+        }
+        .con1>img{
+            width: 80px;
+            color: blue;
+            background-color: black;
+             height: 80px; 
+        }
+        .con1>a{
+            color: white;
+            margin: auto;
+        }
+</style>
 <body>
+    <div class="con1">
+        <img 
+        src="C:\Users\samal\Pictures\apple log\applelogo.jpg" alt="">
+            <a href="C:\Users\samal\Desktop\Project\iphone.html">store</a>
+            <a href="">Mac</a>
+            <a href="">iPad</a>
+            <a href="">Watch</a>
+            <a href="">AirPods</a>
+            <a href="">TV& Home</a>
+            <a href="">Entertainment</a>
+            <a href="">Accessories</a>
+            <a href="">Support</a>
+            <a href="">iPhone</a>
+            <a href="Login.html">Cart</a>
+ </div>
+    <h1 id="total">Your Total cart Price is:- <span id="cart-total">0</span></h1>
     <div id="conatiner"></div>
 </body>
 <script>
     let cont1 = document.getElementById("conatiner")
-    let cart2 = JSON.parse(localStorage.getItem(cart1))
-    
+    let span2 = document.getElementById("cart-total")
+    function showData(){
+        let addcart = JSON.parse(localStorage.getItem("cart"))||[]
+        console.log(addcart);
+        cont1.innerHTML=""
+        let sum = 0
+        for(let i =0 ; i<addcart.length ; i++)
+        {
+            let div1 = document.createElement("div")
+            let img1 = document.createElement("img")
+            let Name1 = document.createElement("h2")
+            let description1 = document.createElement("p")
+            let price1 = document.createElement("p")
+            let btn1 = document.createElement("button")
+            let btn2 = document.createElement("button")
+            let btn3 = document.createElement("button")
+            let span1 = document.createElement("span")
+
+            img1.src=addcart[i].Product.image
+            Name1.innerText=addcart[i].Product.Name
+            description1.innerText=addcart[i].Product.description
+            price1.innerText=addcart[i].Product.Price
+            btn1.innerText="+"
+            btn2.innerText="-"
+            btn3.innerText="Remove"
+            span1.innerText=addcart[i].Quantity
+
+            btn1.addEventListener("click" ,function(){
+                addcart[i].quantity++;
+                localStorage.setItem("cart", JSON.stringify(addcart))
+                showData()
+            })
+            btn2.addEventListener("click" , function(){
+                addcart[i].quantity--;
+                localStorage.setItem("cart" ,JSON.stringify(addcart))
+                showData()
+            })
+            btn3.addEventListener("click" , function(){
+                addcart = addcart.filter(function(ele){
+                    return ele.Product.id!==addcart[i].Product.id
+                })
+                localStorage.setItem("cart" ,JSON.stringify(addcart))
+                showData()
+
+
+            })
+
+            div1.append(img1 , Name1 , description1 , price1 , btn1 , span1 , btn2 , btn3)
+            console.log(div1)
+            cont1.append(div1)
+            // cont1.append(div1)
+            sum+=addcart[i].Product.Price*addcart[i].Quantity
+
+
+        }
+        span2.innerText=""+sum
+    }
+
+    showData()
+
+
+
+
 </script>
+<!-- signup 
+    login 
+payment
+add to cart
+iphone static page
+mac static page
+-->
 </html>
